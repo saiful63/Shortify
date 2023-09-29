@@ -66,7 +66,8 @@
                 @if(Auth::user()->id == $url->user_id)
                     <tr>
                         <td>{{ $url->url }}</td>
-                        <td><a href="{{ route('getShrotenOne',$url->code) }}" target="_" onclick="Redirect(redirection{{ $url->code }})" id="redirection{{ $url->code }}">{{ route('getShrotenOne',$url->code) }}</a></td>
+                        {{-- <td><a href="{{ route('getShrotenOne',$url->code) }}" target="_" onclick="Redirect(redirection{{ $url->code }})" id="redirection{{ $url->code }}">{{ route('getShrotenOne',$url->code) }}</a></td> --}}
+                        <td><a href="{{ route('short',$url->code) }}" target="_" onclick="Redirect(redirection{{ $url->code }})" id="redirection{{ $url->code }}">{{ route('short',$url->code) }}</a></td>
                         <td>{{ $url->count }}</td>
                         <td>
                             <div class="w-25 d-flex">

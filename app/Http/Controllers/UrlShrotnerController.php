@@ -32,13 +32,13 @@ class UrlShrotnerController extends Controller
 
 
 
-    public function getShrotenOne($code,UrlShrotner $urlShrotner){
-        $url = $urlShrotner->where('code',$code)->first();
-        $url->update([
-            'count'=>$url->count + 1
-        ]);
-        return redirect($url->url);
-    }
+    // public function getShrotenOne($code,UrlShrotner $urlShrotner){
+    //     $url = $urlShrotner->where('code',$code)->first();
+    //     $url->update([
+    //         'count'=>$url->count + 1
+    //     ]);
+    //     return redirect($url->url);
+    // }
 
     public function edit(UrlShrotner $urlShrotner){
      $url_det = $urlShrotner;
