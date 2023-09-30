@@ -15,6 +15,7 @@ Route::post('register',[AuthController::class,'register'])->name('register')->mi
 Route::get('/short/{code}',[ShortController::class,'short'])->name('short');
 
 Route::group(['middleware'=>'auth'],function(){
+    //Route::get('home',[AuthController::class,'show'])->name('home');
     Route::get('home',[AuthController::class,'home'])->name('home');
     Route::get('logout',[AuthController::class,'logout'])->name('logout');
     Route::resource('url_shrotner',UrlShrotnerController::class);

@@ -51,7 +51,7 @@ class AuthController extends Controller
     }
 
 
-    
+
 
     public function home(UrlShrotner $urlShrotner){
 

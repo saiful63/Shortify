@@ -10,10 +10,15 @@ use Auth;
 
 class UrlShrotnerController extends Controller
 {
-    public function home(UrlShrotner $urlShrotner){
-        $urls = $urlShrotner->latest()->get();
-        return view('UrlShrotner',compact('urls'));
-    }
+    // public function home(UrlShrotner $urlShrotner){
+    //     $urls = $urlShrotner->latest()->get();
+    //     return view('UrlShrotner',compact('urls'));
+    // }
+
+    // public function home(UrlShrotner $urlShrotner){
+    //     $urls = $urlShrotner->latest()->get();
+    //     return view('UrlShrotner',compact('urls'));
+    // }
 
     public function store(ShortUrlRequest $request,UrlShrotner $urlShrotner){
         do{

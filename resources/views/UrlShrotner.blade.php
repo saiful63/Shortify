@@ -63,7 +63,10 @@
             <tbody>
 
                 @foreach ($urls as $url)
-                @if(Auth::user()->id == $url->user_id)
+                {{-- @if(Auth::user()->id == $url->user_id) --}}
+                @can('view',$url)
+
+
                     <tr>
                         <td>{{ $url->url }}</td>
                         {{-- <td><a href="{{ route('getShrotenOne',$url->code) }}" target="_" onclick="Redirect(redirection{{ $url->code }})" id="redirection{{ $url->code }}">{{ route('getShrotenOne',$url->code) }}</a></td> --}}
@@ -85,7 +88,8 @@
 
                         </td>
                     </tr>
-                @endif
+                     @endcan
+                {{-- @endif --}}
                 @endforeach
 
 
